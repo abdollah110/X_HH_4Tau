@@ -1,1 +1,10 @@
-root://cmsxrootd.hep.wisc.edu//store/user/abdollah/ExoHiggs/MiniAOD_4bjets/21223_ExoHiggs_4b_UL18MiniAOD.root
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim

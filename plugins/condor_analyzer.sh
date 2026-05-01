@@ -17,7 +17,7 @@ fi
 
 export HOME=$(pwd)
 nthd=2
-input=$1
+seed=$1
 process=$2
 name=$3
 export SCRAM_ARCH=slc7_amd64_gcc820
@@ -32,13 +32,6 @@ exit_on_error() {
     fi
 } 
 
-
-
-#git config --global user.name 'Abdollah Mohammadi'
-#git config --global user.email 'abdollah.mohammadi@cern.ch'
-#git config --global user.github 'abdollah110'
-
-#git config --list
 
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
@@ -59,7 +52,7 @@ cd X_HH_4Tau/plugins
 # ./BoostedHTT_4t_nano.exe  -s root://cmsxrootd.hep.wisc.edu//store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim/singleFileSkimForSubmission-NANO_NANO_*33.root  -n nanotest_zz4l_33_fromCondor.root
 
 
-FILES=$(xrdfs cmsxrootd.hep.wisc.edu ls /store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim | grep NANO_NANO_.*33.root)
+FILES=$(xrdfs cmsxrootd.hep.wisc.edu ls ${seed} | grep NANO_NANO_.*${process}.root)
 
 for f in $FILES
 do
