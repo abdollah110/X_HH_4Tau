@@ -1,0 +1,19 @@
+Universe = vanilla
+Executable = condor_analyzer.sh
+Arguments = $(seed) $(Process)   MYNAME_testHiggs
+request_cpus = 1
+request_memory = 2000
+request_disk = 1GB
+requirements =  HasSingularity
+x509userproxy = /tmp/x509up_u4541 
+
+should_transfer_files = YES
+
+transfer_input_files =  SkimerBoost_4t.cc
+
+Error = log/job_$(Cluster)-$(Process).err
+Output = log/job_$(Cluster)-$(Process).out
+Log = log/job_$(Cluster).log
+
+#queue seed from seed_list.txt 
+
