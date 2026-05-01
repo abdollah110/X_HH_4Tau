@@ -59,7 +59,7 @@ do
     INPUT="root://cmsxrootd.hep.wisc.edu/${f}"
     
     BASENAME=$(basename "$f" .root)
-    OUTPUT="${BASENAME}_out.root"
+    OUTPUT="${BASENAME}_outX.root"
 
     echo "Running on $INPUT"
     ./BoostedHTT_4t_nano.exe -s "$INPUT" -n "$OUTPUT"
@@ -68,10 +68,10 @@ done
 
 
 
-hadd nanotest_zz4l_33_fromCondor.root  *_out.root
-eval `scram unsetenv -sh`
+hadd hzz4l_out_${name}_${process}.root  *_outX.root
+# eval `scram unsetenv -sh`
 
-gfal-copy -p nanotest_zz4l_33_fromCondor.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/TESTTEST_${name}_${process}_nanotest_zz4l_33_fromCondor.root
+gfal-copy -p hzz4l_out_${name}_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/hzz4l_out_${name}_${process}.root
 #gfal-copy -p X_Mini.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/OUTROOT_${name}_${process}_Mini.root
 
 
