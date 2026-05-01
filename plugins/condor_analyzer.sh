@@ -71,11 +71,13 @@ done
 hadd out_${name}_${process}.root  *_outX.root
 eval `scram unsetenv -sh`
 
-gfal-copy -p test.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/test.root
-gfal-copy -p test_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/test_${process}.root
 
-gfal-copy -p out_${name}_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/out_${name}_${process}.root
+gfal-copy -p out_${name}_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/NewOut_${name}_${process}.root
 #gfal-copy -p X_Mini.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/OUTROOT_${name}_${process}_Mini.root
 
 
 
+
+
+
+# condor_submit -append "Queue seed from seed_list.txt" -append "Arguments = \$(seed) \$(Process)  ZZTo4Q" condor_submit.sub

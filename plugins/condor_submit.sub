@@ -15,5 +15,6 @@ Error = log/job_$(Cluster)-$(Process).err
 Output = log/job_$(Cluster)-$(Process).out
 Log = log/job_$(Cluster).log
 
+queue 10
 #queue seed from seed_list.txt 
 
