@@ -51,7 +51,7 @@ cd CMSSW_10_6_47_patch1/src
 
 eval $(scram runtime -sh)
 
-git clone git@github.com:abdollah110/X_HH_4Tau.git
+git clone https://github.com/abdollah110/X_HH_4Tau.git
 
 cd X_HH_4Tau/plugins
 ./Make.sh BoostedHTT_4t_nano.cc
@@ -75,7 +75,7 @@ done
 
 
 
-
+hadd nanotest_zz4l_33_fromCondor.root  *_out.root
 eval `scram unsetenv -sh`
 
 gfal-copy -p nanotest_zz4l_33_fromCondor.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/TESTTEST_${name}_${process}_nanotest_zz4l_33_fromCondor.root
