@@ -72,10 +72,8 @@ hadd out_${name}_${process}.root  *_outX.root
 eval `scram unsetenv -sh`
 
 
-gfal-copy -p out_${name}_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/NewOut_${name}_${process}.root
+gfal-copy -p out_${name}_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/Output_X_HH_4Tau/NewOut_${name}_${process}.root
 #gfal-copy -p X_Mini.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/OUTROOT_${name}_${process}_Mini.root
-
-
 
 
 
