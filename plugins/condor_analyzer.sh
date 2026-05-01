@@ -53,10 +53,24 @@ eval $(scram runtime -sh)
 
 git clone git@github.com:abdollah110/X_HH_4Tau.git
 
-cd X_HH_4Tau
+cd X_HH_4Tau/plugins
 ./Make.sh BoostedHTT_4t_nano.cc
 
-./BoostedHTT_4t_nano.exe  -s /hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim/singleFileSkimForSubmission-NANO_NANO_*33.root  -n nanotest_zz4l_33_fromCondor.root
+# ./BoostedHTT_4t_nano.exe  -s root://cmsxrootd.hep.wisc.edu//store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim/singleFileSkimForSubmission-NANO_NANO_*33.root  -n nanotest_zz4l_33_fromCondor.root
+
+
+FILES=$(xrdfs cmsxrootd.hep.wisc.edu ls /store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim | grep NANO_NANO_.*33.root)
+
+for f in $FILES
+do
+    INPUT="root://cmsxrootd.hep.wisc.edu/${f}"
+    
+    BASENAME=$(basename "$f" .root)
+    OUTPUT="${BASENAME}_out.root"
+
+    echo "Running on $INPUT"
+    ./BoostedHTT_4t_nano.exe -s "$INPUT" -n "$OUTPUT"
+done
 
 
 
