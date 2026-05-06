@@ -98,7 +98,9 @@ std::cout << "TotalGenWeight=  "<<TotalGenWeight << "  TotalNumEvent=  " << Tota
 
     TTree* outTr = new TTree("tree_4tau","tree_4tau");
 
-
+    TH1F *gnwt_tot = new TH1F("gnwt_tot", "gnwt_tot", 5, 0, 5);
+    gnwt_tot->SetBinContent(1,TotalGenWeight);
+    gnwt_tot->SetBinContent(2,TotalNumEvent);
 
     
 
@@ -395,7 +397,7 @@ std::cout << "TotalGenWeight=  "<<TotalGenWeight << "  TotalNumEvent=  " << Tota
     outTr->Branch("LeadMuonEta", &LeadMuonEta, "LeadMuonEta/F"); 
 
     
-
+    gnwt_tot->SetBinContent(3,Run_Tree->GetEntries());
     Int_t nentries_wtn = (Int_t) Run_Tree->GetEntries();
     cout<<"nentries_wtn===="<<nentries_wtn<<"\n";
     for (Int_t i = 0; i < nentries_wtn; i++) {
@@ -823,5 +825,6 @@ plotFill("cutFlowTable",7 ,15,0,15);
     for (; iMap2 != jMap2; ++iMap2)
         nplot2(iMap2->first)->Write();
     
+    gnwt_tot->Write();
     fout->Close();
 }
