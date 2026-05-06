@@ -1,10 +1,2 @@
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
-/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim
+condor_submit  -append "Arguments = /store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim  \$(Process)  ZZTo4Q" condor_submit.sub
+

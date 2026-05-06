@@ -84,6 +84,9 @@ TH1F* Histotest = nullptr;
             TotalNumEvent += Histotest->GetBinContent(2);
     }
     }
+plotFill("TotalGenWeight", TotalGenWeight,15,0,15);
+
+    
 std::cout << "TotalGenWeight=  "<<TotalGenWeight << "  TotalNumEvent=  " << TotalNumEvent << std::endl;    
     // -------------------------------
     // 📁 Output file
