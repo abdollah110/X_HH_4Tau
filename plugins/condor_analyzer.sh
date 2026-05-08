@@ -47,7 +47,7 @@ eval $(scram runtime -sh)
 git clone https://github.com/abdollah110/X_HH_4Tau.git
 
 cd X_HH_4Tau/plugins
-./Make.sh BoostedHTT_4t_nano.cc
+./Make.sh BoostedHTT_4t_Trevor.cc
 
 # ./BoostedHTT_4t_nano.exe  -s root://cmsxrootd.hep.wisc.edu//store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim/singleFileSkimForSubmission-NANO_NANO_*33.root  -n nanotest_zz4l_33_fromCondor.root
 
@@ -62,7 +62,7 @@ do
     OUTPUT="${BASENAME}_outX.root"
 
     echo "Running on $INPUT"
-    ./BoostedHTT_4t_nano.exe -s "$INPUT" -n "$OUTPUT"
+    ./BoostedHTT_4t_Trevor.exe -s "$INPUT" -n "$OUTPUT"
 done
 
 
