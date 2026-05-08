@@ -157,7 +157,7 @@
     },
     "DYJetsToLL_M-50_HT-2500toInf": {
         "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-1200to2500_12December25_1547_skim_Oldskim",
-        "xsec": 0,
+        "xsec": 0.002997,
         "TotGenWt": 44057.49300824668,
         "numFiles": 149
     },

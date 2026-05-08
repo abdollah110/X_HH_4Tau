@@ -5,7 +5,7 @@ import os
 # -----------------------------
 # Config
 # -----------------------------
-LUMI = 59000.0  # pb^-1
+LUMI = 59740  # pb^-1
 TREE_NAME = "tree_4tau"
 BRANCH = "LeadMuonPt"
 
@@ -38,7 +38,7 @@ for i, (sample_name, info) in enumerate(samples.items()):
     print(i)
     print(f"\nProcessing: {sample_name}")
 
-    if 'QCD' in sample_name: continue 
+    # if 'QCD' in sample_name: continue 
     
     file_path = f"../HADD_RootFile/{sample_name}.root"
     xsec = float(info["xsec"])
@@ -123,6 +123,43 @@ for i, (sample_name, info) in enumerate(samples.items()):
             print(" -> Skipped (empty histogram)")
 
     f.Close()
+
+
+
+
+
+output_txt = "yields.txt"
+
+with open(output_txt, "w") as f:
+
+    f.write("Process Yields\n")
+    f.write("=" * 40 + "\n")
+
+    total_mc = 0.0
+
+    for hist in mc_hists:
+    # print(hist.GetName(), hist.Integral())
+
+    # # Loop over all MC processes
+    # for name, hist in processes.items():
+        name=hist.GetName()
+        integral = hist.Integral()
+
+        total_mc += integral
+
+        f.write(f"{name:20s} : {integral:12.4f}\n")
+
+    # Total MC
+    f.write("-" * 40 + "\n")
+    f.write(f"{'Total MC':20s} : {total_mc:12.4f}\n")
+
+    # Data yield
+    data_integral = data_hist.Integral()
+
+    f.write(f"{'Data':20s} : {data_integral:12.4f}\n")
+
+print(f"Yields saved to {output_txt}")
+
 
 # -----------------------------
 # Plot
