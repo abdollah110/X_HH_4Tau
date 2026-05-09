@@ -47,37 +47,28 @@ eval $(scram runtime -sh)
 git clone https://github.com/abdollah110/X_HH_4Tau.git
 
 cd X_HH_4Tau/plugins
-./Make.sh BoostedHTT_4t_Trevor.cc
-
+# ./Make.sh BoostedHTT_4t_Trevor.cc
+./Make.sh BoostedHTT_4t_Ganesh.cc
 
 # ./BoostedHTT_4t_nano.exe  -s root://cmsxrootd.hep.wisc.edu//store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim/singleFileSkimForSubmission-NANO_NANO_*33.root  -n nanotest_zz4l_33_fromCondor.root
 
 
-FILES=$(xrdfs cmsxrootd.hep.wisc.edu ls ${seed} | grep NANO_NANO_.*${process}.root)
-
-for f in $FILES
-do
-    INPUT="root://cmsxrootd.hep.wisc.edu/${f}"
-    
-    BASENAME=$(basename "$f" .root)
-    OUTPUT="${BASENAME}_outX.root"
-
-    echo "Running on $INPUT"
-    ./BoostedHTT_4t_Trevor.exe -s "$INPUT" -n "$OUTPUT"
-
-done
+INPUT="root://cmsxrootd.hep.wisc.edu/${seed}"
+OUTPUT="${name}_outX.root"
 
 
 
+echo "Running input:  $INPUT"
+echo "Running output:  $OUTPUT"
+# ./BoostedHTT_4t_Trevor.exe -s "$INPUT" -n "$OUTPUT"
+./BoostedHTT_4t_Ganesh.exe -s "$INPUT" -n "$OUTPUT"
 
-hadd out_${name}_${process}.root  *_outX.root
 eval `scram unsetenv -sh`
 
-
-gfal-copy -p out_${name}_${process}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/Output_X_HH_4Tau/NewOut_${name}_${process}.root
+gfal-copy -p out_${name}.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/Output_X_HH_4Tau_Ganesh/NewOut_${name}.root
 #gfal-copy -p X_Mini.root   davs://cmsxrootd.hep.wisc.edu:1094/store/user/abdollah/OUTROOT_${name}_${process}_Mini.root
 
 
 
 
-# condor_submit -append "Queue seed from seed_list.txt" -append "Arguments = \$(seed) \$(Process)  ZZTo4Q" condor_submit.subrocess)  ZZTo4Q" condor_submit.sub
+# condor_submit -append "Queue seed from seed_list.txt" -append "Arguments = \$(seed) \$(Process)  ZZTo4Q" condor_submit.sub
