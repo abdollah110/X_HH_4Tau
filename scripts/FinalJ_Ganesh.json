@@ -1,0 +1,326 @@
+{
+    "TTToSemiLeptonic": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/TTToSemiLeptonic_35August25_0448_skim_Newskim",
+        "xsec": 365.25,
+        "TotGenWt": 28853437.857774053,
+        "numFiles": 4988
+    },
+    "TTTo2L2Nu": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/TTTo2L2Nu_26August25_0719_skim_Newskim",
+        "xsec": 87.56,
+        "TotGenWt": 3459559.616359392,
+        "numFiles": 3069
+    },
+    "TTToHadronic": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/TTToHadronic_25October25_0813_skim_Newskim",
+        "xsec": 381.09,
+        "TotGenWt": 15022989.476607585,
+        "numFiles": 7194
+    },
+    "ZZTo4L": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4L_26August25_0757_skim_Newskim",
+        "xsec": 1.32,
+        "TotGenWt": 102656.11257977436,
+        "numFiles": 1308
+    },
+    "ZZTo2L2Nu": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo2L2Nu_04March26_0503_skim_Newskim",
+        "xsec": 0.97,
+        "TotGenWt": 175943.3800141718,
+        "numFiles": 280
+    },
+    "ZZTo2Nu2Q_5f": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo2Nu2Q_04March26_0510_skim_Newskim",
+        "xsec": 4.54,
+        "TotGenWt": 0.0,
+        "numFiles": 120
+    },
+    "VV2l2nu": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WWTo2L2Nu_26August25_1040_skim_Newskim",
+        "xsec": 11.09,
+        "TotGenWt": 1514987.0834473576,
+        "numFiles": 82
+    },
+    "ZZTo4Q_5f": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo4Q_04March26_0505_skim_Newskim",
+        "xsec": 3.26,
+        "TotGenWt": 549408.09375,
+        "numFiles": 35
+    },
+    "WWTo1L1Nu2Q_4f": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WWTo2L2Nu_26August25_1040_skim_Newskim",
+        "xsec": 51.65,
+        "TotGenWt": 1514987.0834473576,
+        "numFiles": 82
+    },
+    "WWTo4Q_4f": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WWTo4Q_04March26_0512_skim_Newskim",
+        "xsec": 51.03,
+        "TotGenWt": 10407712.2,
+        "numFiles": 322
+    },
+    "WZTo1L3Nu_4f": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WZTo1L3Nu_4f_26August25_1016_skim_Newskim",
+        "xsec": 3.41,
+        "TotGenWt": 248440.3291903409,
+        "numFiles": 67
+    },
+    "ZZTo2Q2L_mllmin4p0": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ZZTo2Q2L_26August25_1034_skim_Newskim",
+        "xsec": 3.68,
+        "TotGenWt": 337260.98703963857,
+        "numFiles": 597
+    },
+    "WZTo2Q2L_mllmin4p0": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WZTo2L2Q_26August25_0926_skim_Newskim",
+        "xsec": 6.57,
+        "TotGenWt": 619488.8940854258,
+        "numFiles": 513
+    },
+    "WZTo1L1Nu2Q_4f": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WZTo1L1Nu2Q_26August25_0840_skim_Newskim",
+        "xsec": 9.12,
+        "TotGenWt": 1071594.2768599484,
+        "numFiles": 141
+    },
+    "DYJetsToLL_M-4to50_HT-70to100": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-4to50_HT-70to100_12December25_1606_skim_Oldskim",
+        "xsec": 314.8,
+        "TotGenWt": 79735.36363636363,
+        "numFiles": 223
+    },
+    "DYJetsToLL_M-4to50_HT-100to200": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-4to50_HT-100to200_12December25_1604_skim_Oldskim",
+        "xsec": 190.6,
+        "TotGenWt": 75965.68518518518,
+        "numFiles": 206
+    },
+    "DYJetsToLL_M-4to50_HT-200to400": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-4to50_HT-200to400_12December25_1544_skim_Oldskim",
+        "xsec": 42.27,
+        "TotGenWt": 56981.401939655174,
+        "numFiles": 260
+    },
+    "DYJetsToLL_M-4to50_HT-400to600": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-4to50_HT-400to600_12December25_1552_skim_Oldskim",
+        "xsec": 4.05,
+        "TotGenWt": 52887.527956003665,
+        "numFiles": 308
+    },
+    "DYJetsToLL_M-4to50_HT-600toInf": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-4to50_HT-600toInf_12December25_1608_skim_Oldskim",
+        "xsec": 1.22,
+        "TotGenWt": 51923.72088981578,
+        "numFiles": 289
+    },
+    "DYJetsToLL_M-50_HT-70to100": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-70to100_12December25_1556_skim_Oldskim",
+        "xsec": 140,
+        "TotGenWt": 49521.51944444444,
+        "numFiles": 354
+    },
+    "DYJetsToLL_M-50_HT-100to200": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-100to200_12December25_1548_skim_Oldskim",
+        "xsec": 139.2,
+        "TotGenWt": 48911.81351453379,
+        "numFiles": 549
+    },
+    "DYJetsToLL_M-50_HT-200to400": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-200to400_12December25_1559_skim_Oldskim",
+        "xsec": 38.4,
+        "TotGenWt": 48721.30824473046,
+        "numFiles": 392
+    },
+    "DYJetsToLL_M-50_HT-400to600": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-400to600_12December25_1546_skim_Oldskim",
+        "xsec": 5.17,
+        "TotGenWt": 47219.033206641325,
+        "numFiles": 195
+    },
+    "DYJetsToLL_M-50_HT-600to800": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-600to800_12December25_1555_skim_Oldskim",
+        "xsec": 1.26,
+        "TotGenWt": 46281.24521159387,
+        "numFiles": 161
+    },
+    "DYJetsToLL_M-50_HT-800to1200": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-800to1200_12December25_1602_skim_Oldskim",
+        "xsec": 0.56,
+        "TotGenWt": 44383.48241931844,
+        "numFiles": 167
+    },
+    "DYJetsToLL_M-50_HT-1200to2500": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-1200to2500_12December25_1547_skim_Oldskim",
+        "xsec": 0.13,
+        "TotGenWt": 44057.49300824668,
+        "numFiles": 149
+    },
+    "DYJetsToLL_M-50_HT-2500toInf": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/DYJetsToLL_M-50_HT-1200to2500_12December25_1547_skim_Oldskim",
+        "xsec": 0.002997,
+        "TotGenWt": 44057.49300824668,
+        "numFiles": 149
+    },
+    "ST_t-channel_top_4f_InclusiveDecays": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ST_t-channel_top_4f_InclusiveDecays_26August25_0843_skim_Newskim",
+        "xsec": 134.2,
+        "TotGenWt": 5271698.183333334,
+        "numFiles": 3657
+    },
+    "channel_antitop_4f_InclusiveDecays": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ST_t-channel_antitop_4f_InclusiveDecays_26August25_0821_skim_Newskim",
+        "xsec": 80.8,
+        "TotGenWt": 3285907.5408038977,
+        "numFiles": 1914
+    },
+    "ST_tW_top_5f_inclusiveDecays": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ST_tW_top_5f_inclusiveDecays_26August25_0753_skim_Newskim",
+        "xsec": 39.65,
+        "TotGenWt": 1738340.6035456732,
+        "numFiles": 165
+    },
+    "ST_tW_antitop_5f_inclusiveDecays": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ST_tW_antitop_5f_inclusiveDecays_26August25_1030_skim_Newskim",
+        "xsec": 39.65,
+        "TotGenWt": 1913516.0546614872,
+        "numFiles": 140
+    },
+    "ST_s-channel_4f_hadronicDecays": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ST_s-channel_4f_hadronicDecays_04March26_0506_skim_Newskim",
+        "xsec": 7.49,
+        "TotGenWt": 809657.3888888889,
+        "numFiles": 145
+    },
+    "ST_s-channel_4f_leptonDecays": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/ST_s-channel_4f_leptonDecays_04March26_0507_skim_Newskim",
+        "xsec": 3.59,
+        "TotGenWt": 167927.04927646767,
+        "numFiles": 405
+    },
+    "WJetsToLNu_HT-70To100": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-70To100_04March26_0515_skim_Newskim",
+        "xsec": 1283,
+        "TotGenWt": 47742.74074074074,
+        "numFiles": 1357
+    },
+    "WJetsToLNu_HT-100To200": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-100To200_26August25_0810_skim_Newskim",
+        "xsec": 1244,
+        "TotGenWt": 47742.01730103806,
+        "numFiles": 1115
+    },
+    "WJetsToLNu_HT-200To400": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-200To400_26August25_0709_skim_Newskim",
+        "xsec": 337.8,
+        "TotGenWt": 47602.03676694014,
+        "numFiles": 1252
+    },
+    "WJetsToLNu_HT-400To600": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-400To600_26August25_1014_skim_Newskim",
+        "xsec": 44.93,
+        "TotGenWt": 45333.5305785124,
+        "numFiles": 186
+    },
+    "WJetsToLNu_HT-600To800": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-600To800_26August25_0755_skim_Newskim",
+        "xsec": 11.19,
+        "TotGenWt": 47603.7607025247,
+        "numFiles": 176
+    },
+    "WJetsToLNu_HT-800To1200": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-800To1200_26August25_0708_skim_Newskim",
+        "xsec": 4.93,
+        "TotGenWt": 47611.09823399559,
+        "numFiles": 160
+    },
+    "WJetsToLNu_HT-1200To2500": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-1200To2500_26August25_1016_skim_Newskim",
+        "xsec": 1.15,
+        "TotGenWt": 46684.91468312273,
+        "numFiles": 148
+    },
+    "WJetsToLNu_HT-2500ToInf": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/WJetsToLNu_HT-2500ToInf_OtherPart_26August25_1043_skim_Newskim",
+        "xsec": 0.03,
+        "TotGenWt": 29847.59556214926,
+        "numFiles": 353
+    },
+    "QCD_HT50to100": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT50to100_23April26_0525_skim_FourTauSkim",
+        "xsec": 186100000,
+        "TotGenWt": 0.0,
+        "numFiles": 431
+    },
+    "QCD_HT100to200": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT100to200_23April26_0519_skim_FourTauSkim",
+        "xsec": 23630000,
+        "TotGenWt": 47415.0,
+        "numFiles": 924
+    },
+    "QCD_HT200to300": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT200to300_23April26_0542_skim_FourTauSkim",
+        "xsec": 1554000,
+        "TotGenWt": 0.0,
+        "numFiles": 1151
+    },
+    "QCD_HT300to500": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT300to500_23April26_0555_skim_FourTauSkim",
+        "xsec": 323800,
+        "TotGenWt": 47654.333333333336,
+        "numFiles": 1320
+    },
+    "QCD_HT500to700": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT500to700_23April26_0512_skim_FourTauSkim",
+        "xsec": 30280,
+        "TotGenWt": 48468.73333333333,
+        "numFiles": 1031
+    },
+    "QCD_HT700to1000": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT700to1000_23April26_0528_skim_FourTauSkim",
+        "xsec": 6392,
+        "TotGenWt": 55130.442307692305,
+        "numFiles": 889
+    },
+    "QCD_HT1000to1500": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT1000to1500_23April26_0536_skim_FourTauSkim",
+        "xsec": 1118,
+        "TotGenWt": 44529.833333333336,
+        "numFiles": 325
+    },
+    "QCD_HT1500to2000": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT1500to2000_23April26_0539_skim_FourTauSkim",
+        "xsec": 108.9,
+        "TotGenWt": 47736.771929824565,
+        "numFiles": 229
+    },
+    "QCD_HT2000toInf": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/MC/QCD_HT2000toInf_23April26_0541_skim_FourTauSkim",
+        "xsec": 21.93,
+        "TotGenWt": 47151.38636363636,
+        "numFiles": 117
+    },
+    "SingleMuA": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/Data/SingleMu_Run2018A_15January26_0751_skim_Jan26Skim",
+        "xsec": 1.0,
+        "TotGenWt": 83811.76369818229,
+        "numFiles": 2962
+    },
+    "SingleMuB": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/Data/SingleMu_Run2018B_15January26_0731_skim_Jan26Skim",
+        "xsec": 1.0,
+        "TotGenWt": 90026.72198460222,
+        "numFiles": 1369
+    },
+    "SingleMuC": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/Data/SingleMu_Run2018C_15January26_0740_skim_Jan26Skim",
+        "xsec": 1.0,
+        "TotGenWt": 87602.712,
+        "numFiles": 1296
+    },
+    "SingleMuD": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/Data/SingleMu_Run2018D_15January26_0815_skim_Jan26Skim",
+        "xsec": 1.0,
+        "TotGenWt": 94069.9757632087,
+        "numFiles": 5590
+    }
+}
