@@ -16,7 +16,8 @@ XMAX = 400
 # -----------------------------
 # Load JSON
 # -----------------------------
-with open("FinalJ.json") as f:
+# with open("FinalJ.json") as f:
+with open("FinalJ_Ganesh.json") as f:
     samples = json.load(f)
 
 # -----------------------------
@@ -40,11 +41,17 @@ for i, (sample_name, info) in enumerate(samples.items()):
 
     # if 'QCD' in sample_name: continue 
     
-    file_path = f"../HADD_RootFile/{sample_name}.root"
+    # file_path = f"../HADD_RootFile/{sample_name}.root"
+    file_path = f"/hdfs/store/user/abdollah/Output_X_HH_4Tau_Ganesh/NewOut_{sample_name}.root"
     xsec = float(info["xsec"])
     genWt=float(info["TotGenWt"])
     TotNumFile=float(info["numFiles"])
 
+    if not os.path.exists(file_path):
+        print(f"Skipping: file does not exist: {file_path}")
+        continue    
+
+            
     f = ROOT.TFile.Open(file_path)
     if not f or f.IsZombie():
         print(f" -> Failed to open {file_path}")
@@ -128,7 +135,8 @@ for i, (sample_name, info) in enumerate(samples.items()):
 
 
 
-output_txt = "yields.txt"
+# output_txt = "yields.txt"
+output_txt = "yields_Ganesh.txt"
 
 with open(output_txt, "w") as f:
 
@@ -245,7 +253,8 @@ line.SetLineStyle(2)
 line.Draw()
 
 canvas.Update()
-canvas.SaveAs("stack_with_ratio.png")
+# canvas.SaveAs("stack_with_ratio.png")
+canvas.SaveAs("stack_with_ratio_Ganesh.png")
 
 
 
