@@ -142,7 +142,7 @@ plotFill("cutFlowTable",3 ,15,0,15);
                 
 std::vector<int> numSelectedMuon;
 for (int imu = 0; imu < nMuon; ++imu){
-    if (Muon_pt[imu] > 52 && fabs(Muon_eta[imu]) < 2.4 &&  Muon_tightId[imu] &&  Muon_pfRelIso04_all[0]< 0.15 ){
+    if (Muon_pt[imu] > 52 && fabs(Muon_eta[imu]) < 2.4 &&  Muon_tightId[imu] &&  Muon_pfRelIso04_all[imu]< 0.15 ){
         numSelectedMuon.push_back(imu);
     }
 }
@@ -152,7 +152,7 @@ plotFill("cutFlowTable",4 ,15,0,15);
 
 std::vector<int> numSelectedBoostedTau;
 for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
-    if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){
+    if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_idDecayModeOldDMs[ibtau] &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){
         numSelectedBoostedTau.push_back(ibtau);
     }
 }
@@ -160,6 +160,14 @@ if (numSelectedBoostedTau.size() < 4) continue;
 plotFill("cutFlowTable",5 ,15,0,15); 
 
 
+
+if (MET_pt < 80)  continue;
+plotFill("cutFlowTable",6 ,15,0,15);          
+
+if (nFatJet< 1)         continue;
+plotFill("cutFlowTable",7 ,15,0,15);     
+
+        
         
 LeadMuonPt=Muon_pt[numSelectedMuon[0]];
 LeadMuonEta=Muon_eta[numSelectedMuon[0]];        
