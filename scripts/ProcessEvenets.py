@@ -7,11 +7,14 @@ import os
 # -----------------------------
 LUMI = 59740  # pb^-1
 TREE_NAME = "tree_4tau"
-BRANCH = "LeadMuonPt"
-
-NBINS = 40
-XMIN = 0
-XMAX = 400
+# BRANCH = "LeadMuonPt"
+BRANCH = "LeadMuonEta"
+NBINS = 25
+XMIN = -2.5
+XMAX = 2.5
+# NBINS = 40
+# XMIN = 0
+# XMAX = 400
 
 # -----------------------------
 # Load JSON
@@ -105,38 +108,41 @@ for i, (sample_name, info) in enumerate(samples.items()):
                 if isData:
                     data_hist.Fill(pt, weight)
                 else:
+                    print('now is running on MC \n')
                     hist.Fill(pt, weight)
         else:
             if isData:
                 data_hist.Fill(pts, weight)
             else:
+                # print('again is running on MC \n')
                 hist.Fill(pts, weight)
 
     # -----------------------------
     # After event loop
     # -----------------------------
-    print(f" -> Integral: {hist.Integral()}")
+    
+    
 
     if not isData:
         if hist.Integral() != 0:
             hist.SetFillColorAlpha(i + 2, 0.7)
-
+            print(f" -> Integral: {hist.Integral()}")
             mc_hists.append(hist)        # KEEP reference
             stack.Add(hist)
             legend.AddEntry(hist, sample_name, "f")
 
             print(" -> Added to stack")
-        else:
+        else:            
             print(" -> Skipped (empty histogram)")
 
     f.Close()
 
-
+    print(f" -> Data Integral: {data_hist.Integral()}")
 
 
 
 # output_txt = "yields.txt"
-output_txt = "yields_Ganesh.txt"
+output_txt = "yields_Ganesh_eta.txt"
 
 with open(output_txt, "w") as f:
 
@@ -155,16 +161,16 @@ with open(output_txt, "w") as f:
 
         total_mc += integral
 
-        f.write(f"{name:20s} : {integral:12.4f}\n")
+        f.write(f"{name:20s} : {integral:12.1f}\n")
 
     # Total MC
-    f.write("-" * 40 + "\n")
-    f.write(f"{'Total MC':20s} : {total_mc:12.4f}\n")
+    f.write("=" * 40 + "\n")
+    f.write(f"{'Total MC':20s} : {total_mc:12.1f}\n")
 
     # Data yield
     data_integral = data_hist.Integral()
 
-    f.write(f"{'Data':20s} : {data_integral:12.4f}\n")
+    f.write(f"{'Data':20s} : {data_integral:12.1f}\n")
 
 print(f"Yields saved to {output_txt}")
 
@@ -254,7 +260,7 @@ line.Draw()
 
 canvas.Update()
 # canvas.SaveAs("stack_with_ratio.png")
-canvas.SaveAs("stack_with_ratio_Ganesh.png")
+canvas.SaveAs("stack_with_ratio_Ganesh_eta.png")
 
 
 

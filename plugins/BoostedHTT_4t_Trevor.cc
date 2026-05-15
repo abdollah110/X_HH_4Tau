@@ -167,13 +167,20 @@ plotFill("cutFlowTable",7 ,15,0,15);
 
     int numSelectedBoostedTau=0;
     for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
-        if (boostedTau_pt[ibtau] > 30 && boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.8){
+        if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){        
+        // if (boostedTau_pt[ibtau] > 30 && boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.8){
             numSelectedBoostedTau++;
         }
     }
         if (numSelectedBoostedTau < 3) continue;
 
-        plotFill("cutFlowTable",8 ,15,0,15);          
+plotFill("cutFlowTable",8 ,15,0,15);          
+
+if (MET_pt < 80)  continue;
+plotFill("cutFlowTable",9 ,15,0,15);          
+
+if (nFatJet< 1)         continue;
+plotFill("cutFlowTable",10 ,15,0,15);          
         
 //     //==================================================================
 

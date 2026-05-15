@@ -322,5 +322,11 @@
         "xsec": 1.0,
         "TotGenWt": 94069.9757632087,
         "numFiles": 5590
+    },
+    "Data": {
+        "file": "/hdfs/store/user/twnelson/HH4Tau_EtAl/Skimmed_Files/2018/Data/SingleMu_Run2018D_15January26_0815_skim_Jan26Skim",
+        "xsec": 1.0,
+        "TotGenWt": 94069.9757632087,
+        "numFiles": 5590
     }
 }
