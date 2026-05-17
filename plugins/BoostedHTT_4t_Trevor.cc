@@ -107,6 +107,7 @@ TH1F* Histotest = nullptr;
     float SubLeadingBoostedTauPt=0;
     float ThirdBoostedTauPt=0;
     float FourthBoostedTauPt=0;
+    float ZMass, ZEta, ZPt;
 
     outTr->Branch("TotalGenWeight", &TotalGenWeight, "TotalGenWeight/F"); 
     outTr->Branch("TotalNumEvent", &TotalNumEvent, "TotalNumEvent/I"); 
@@ -120,7 +121,11 @@ TH1F* Histotest = nullptr;
     outTr->Branch("ThirdBoostedTauPt", &ThirdBoostedTauPt, "ThirdBoostedTauPt/F"); 
     outTr->Branch("FourthBoostedTauPt", &FourthBoostedTauPt, "FourthBoostedTauPt/F"); 
 
-        
+    outTr->Branch("ZMass", &ZMass, "ZMass/F");
+    outTr->Branch("ZPt", &ZPt, "ZPt/F");
+    outTr->Branch("ZEta", &ZEta, "ZEta/F");
+    
+    
     
     Int_t nentries_wtn = (Int_t) Run_Tree->GetEntries();
     cout<<"nentries_wtn===="<<nentries_wtn<<"\n";
@@ -132,46 +137,16 @@ TH1F* Histotest = nullptr;
         
         plotFill("cutFlowTable",1 ,15,0,15);
 
+        
+//         //=========================================================================================================
+//         // Skimmed cuts. Already applied at the skim level
+//         //=========================================================================================================
+//         //=========================================================================================================
+if (nboostedTau < 4) continue;
 
-if (!HLT_Mu50) continue;
-plotFill("cutFlowTable",2 ,15,0,15);
-if (nMuon< 1) continue;
-plotFill("cutFlowTable",3 ,15,0,15);
+plotFill("cutFlowTable",2 ,15,0,15);    
 
         
-// if (Muon_pt[0] < 52)  continue;
-// plotFill("cutFlowTable",4 ,15,0,15);
-// if (fabs(Muon_eta[0] ) >  2.4)  continue;        
-// plotFill("cutFlowTable",5 ,15,0,15);
-// if (!Muon_tightId[0]) continue;
-// plotFill("cutFlowTable",6 ,15,0,15);    
-
-
-std::vector<int> numSelectedMuon;
-for (int imu = 0; imu < nMuon; ++imu){
-    if (Muon_pt[imu] > 52 && fabs(Muon_eta[imu]) < 2.4 &&  Muon_tightId[imu] &&  Muon_pfRelIso04_all[imu]< 0.15 ){
-        numSelectedMuon.push_back(imu);
-    }
-}
-if (numSelectedMuon.size() < 1) continue;
-plotFill("cutFlowTable",4 ,15,0,15);   
-
-
-        
-LeadMuonPt=Muon_pt[0];
-LeadMuonEta=Muon_eta[0];        
-genWeight_=genWeight;
-        
-TLorentzVector LeadTau4Momentum,SubTau4Momentum, Sub_and_Lead_Momentum, Met4Momentum, LeadTau4MomentumNominal, SubTau4MomentumNominal;
-//         //=========================================================================================================
-if (nboostedTau < 3) continue;
-
-plotFill("cutFlowTable",7 ,15,0,15);    
-
-//         //=========================================================================================================
-//         // Event Selection
-//         //=========================================================================================================
-
 std::vector<int> numSelectedBoostedTau;
 for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
     if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_idDecayModeOldDMs[ibtau] &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){
@@ -179,27 +154,63 @@ for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
     }
 }
 if (numSelectedBoostedTau.size() < 4) continue;
-    
+            
+
+plotFill("cutFlowTable",3 ,15,0,15);      
+        
+//         //=========================================================================================================
+//         // Trigger
+//         //=========================================================================================================
+
+if (!HLT_IsoMu27) continue;
+plotFill("cutFlowTable",4 ,15,0,15);
+
+//         //=========================================================================================================
+//         // Muon Pair selection
+//         //=========================================================================================================
+        
+if (nMuon< 2) continue;
+plotFill("cutFlowTable",5 ,15,0,15);
+
+
+std::vector<int> numSelectedMuon;
+for (int imu = 0; imu < nMuon; ++imu){
+    if (Muon_pt[imu] > 10 && fabs(Muon_eta[imu]) < 2.4 &&  Muon_mediumId[imu] &&  Muon_pfRelIso04_all[imu]< 0.15 ){
+        numSelectedMuon.push_back(imu);
+    }
+}
+
+if (numSelectedMuon.size() < 2) continue;        
+plotFill("cutFlowTable",6 ,15,0,15);
 
         
+if (Muon_pt[numSelectedMuon[0]] < 30)  continue;     
+plotFill("cutFlowTable",7 ,15,0,15);        
+                
+        
+TLorentzVector LeadingMuon4Momentum, SubLeadingMuon4Momentum, ZMuMu;        
+LeadingMuon4Momentum.SetPtEtaPhiM(Muon_pt[numSelectedMuon[0]], Muon_eta[numSelectedMuon[0]], Muon_phi[numSelectedMuon[0]], MuMass);
+SubLeadingMuon4Momentum.SetPtEtaPhiM(Muon_pt[numSelectedMuon[1]], Muon_eta[numSelectedMuon[1]], Muon_phi[numSelectedMuon[1]], MuMass);
+ZMuMu= LeadingMuon4Momentum+ SubLeadingMuon4Momentum;
+
+
+//         //=========================================================================================================
+//         // Fill Branches
+//         //=========================================================================================================
+
 LeadingBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[0]];
 SubLeadingBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[1]];
 ThirdBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[2]];
 FourthBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[3]];
+
+LeadMuonPt=LeadingMuon4Momentum.Pt();
+LeadMuonEta=LeadingMuon4Momentum.Eta();
         
+ZMass=ZMuMu.M();
+ZPt=ZMuMu.Pt();
+ZEta=ZMuMu.Eta();        
 
-plotFill("cutFlowTable",8 ,15,0,15);          
-
-if (MET_pt < 80)  continue;
-plotFill("cutFlowTable",9 ,15,0,15);          
-
-if (nFatJet< 1)         continue;
-plotFill("cutFlowTable",10 ,15,0,15);          
-        
-//     //==================================================================
-
-
-    
+genWeight_=genWeight;
 
     // Fill the tree
     outTr->Fill();
