@@ -133,11 +133,15 @@ TH1F* Histotest = nullptr;
         plotFill("cutFlowTable",1 ,15,0,15);
 
 
-if (!HLT_Mu50) continue;
-plotFill("cutFlowTable",2 ,15,0,15);
 
-if (nMuon< 1) continue;
-plotFill("cutFlowTable",3 ,15,0,15);
+if (!HLT_PFMETNoMu120_PFMHTNoMu120_IDTight)
+plotFill("cutFlowTable",2 ,15,0,15);            
+
+// if (!HLT_Mu50) continue;
+// plotFill("cutFlowTable",2 ,15,0,15);
+
+// if (nMuon< 1) continue;
+// plotFill("cutFlowTable",3 ,15,0,15);
 
                 
 std::vector<int> numSelectedMuon;
@@ -150,18 +154,18 @@ if (numSelectedMuon.size() < 1) continue;
 plotFill("cutFlowTable",4 ,15,0,15);        
 
 
-std::vector<int> numSelectedBoostedTau;
-for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
-    if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_idDecayModeOldDMs[ibtau] &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){
-        numSelectedBoostedTau.push_back(ibtau);
-    }
-}
-if (numSelectedBoostedTau.size() < 4) continue;
-plotFill("cutFlowTable",5 ,15,0,15); 
+// std::vector<int> numSelectedBoostedTau;
+// for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
+//     if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_idDecayModeOldDMs[ibtau] &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){
+//         numSelectedBoostedTau.push_back(ibtau);
+//     }
+// }
+// if (numSelectedBoostedTau.size() < 4) continue;
+// plotFill("cutFlowTable",5 ,15,0,15); 
 
 
 
-if (MET_pt < 80)  continue;
+if (MET_pt < 130)  continue;
 plotFill("cutFlowTable",6 ,15,0,15);          
 
 if (nFatJet< 1)         continue;
