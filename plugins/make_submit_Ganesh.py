@@ -1,9 +1,10 @@
 import os
 import glob
 
-input_dir = "/hdfs/store/user/gparida/HHbbtt/Hadded_Skimmed_Files/Full_Production_CMSSW_13_0_13_Nov24_23/LooseSelection_MET_gt_80_nFatJet_gt_0_Skim/2018/SingleMu"
+# input_dir = "/hdfs/store/user/gparida/HHbbtt/Hadded_Skimmed_Files/Full_Production_CMSSW_13_0_13_Nov24_23/LooseSelection_MET_gt_80_nFatJet_gt_0_Skim/2018/SingleMu"
+input_dir = "/hdfs/store/user/gparida/HHbbtt/Hadded_Skimmed_Files/Full_Production_CMSSW_13_0_13_Nov24_23/LooseSelection_MET_gt_80_nFatJet_gt_0_Skim/2018/MET"
 
-with open("submit_all_Ganesh_data.sh", "w") as out:
+with open("submit_all_Ganesh_dataMET.sh", "w") as out:
     out.write("#!/bin/bash\n\n")
 
     root_files = glob.glob(os.path.join(input_dir, "*.root"))

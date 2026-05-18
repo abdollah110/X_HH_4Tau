@@ -107,6 +107,9 @@ TH1F* Histotest = nullptr;
     float SubLeadingBoostedTauPt=0;
     float ThirdBoostedTauPt=0;
     float FourthBoostedTauPt=0;
+    float TMass=0;
+    float met=0;
+    float metphi=0;
 
     outTr->Branch("TotalGenWeight", &TotalGenWeight, "TotalGenWeight/F"); 
     outTr->Branch("TotalNumEvent", &TotalNumEvent, "TotalNumEvent/I"); 
@@ -120,6 +123,10 @@ TH1F* Histotest = nullptr;
     outTr->Branch("ThirdBoostedTauPt", &ThirdBoostedTauPt, "ThirdBoostedTauPt/F"); 
     outTr->Branch("FourthBoostedTauPt", &FourthBoostedTauPt, "FourthBoostedTauPt/F"); 
 
+    outTr->Branch("TMass", &TMass, "TMass/F"); 
+    outTr->Branch("met", &met, "met/F"); 
+    outTr->Branch("metphi", &metphi, "metphi/F"); 
+
         
     
     Int_t nentries_wtn = (Int_t) Run_Tree->GetEntries();
@@ -131,6 +138,7 @@ TH1F* Histotest = nullptr;
         fflush(stdout);
         
         plotFill("cutFlowTable",1 ,15,0,15);
+
 
 
 
@@ -154,6 +162,14 @@ if (numSelectedMuon.size() < 1) continue;
 plotFill("cutFlowTable",4 ,15,0,15);        
 
 
+TLorentzVector LeadingMuon4Momentum;        
+LeadingMuon4Momentum.SetPtEtaPhiM(Muon_pt[numSelectedMuon[0]], Muon_eta[numSelectedMuon[0]], Muon_phi[numSelectedMuon[0]], MuMass);
+TMass= TMass_F(LeadingMuon4Momentum.Pt(), LeadingMuon4Momentum.Px(), LeadingMuon4Momentum.Py(),  MET_pt,  MET_phi);
+        
+met= MET_pt;
+metphi= MET_phi;
+        
+
 // std::vector<int> numSelectedBoostedTau;
 // for (int ibtau = 0; ibtau < nboostedTau; ++ibtau){
 //     if (boostedTau_pt[ibtau] > 20 && fabs(boostedTau_eta[ibtau]) < 2.3 &&  boostedTau_idDecayModeOldDMs[ibtau] &&  boostedTau_rawDeepTau2018v2p7VSjet[ibtau] > 0.5){
@@ -175,15 +191,15 @@ plotFill("cutFlowTable",7 ,15,0,15);
         
 LeadMuonPt=Muon_pt[numSelectedMuon[0]];
 LeadMuonEta=Muon_eta[numSelectedMuon[0]];        
-LeadingBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[0]];
-SubLeadingBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[1]];
-ThirdBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[2]];
-FourthBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[3]];
+// LeadingBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[0]];
+// SubLeadingBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[1]];
+// ThirdBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[2]];
+// FourthBoostedTauPt= boostedTau_pt[numSelectedBoostedTau[3]];
 genWeight_=genWeight;
         
         
 numSelectedMuon.clear();
-numSelectedBoostedTau.clear();
+// numSelectedBoostedTau.clear();
     
 
     // Fill the tree

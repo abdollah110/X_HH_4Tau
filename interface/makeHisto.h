@@ -35,6 +35,9 @@ using namespace std;
 unordered_map<string, TH1F*>* myMap1;
 unordered_map<string, TH2F*>* myMap2;
 //**********************************************
+float TMass_F(float pt3lep, float px3lep, float py3lep, float met, float metPhi) {
+    return sqrt(pow(pt3lep + met, 2) - pow(px3lep + met * cos(metPhi), 2) - pow(py3lep + met * sin(metPhi), 2));
+}
 
 TH1F* nplot1(string name) {
     if (myMap1->find(name) != myMap1->end())
